@@ -58,7 +58,7 @@ namespace tarea_del_29_9_22
             SqlConnection conexion = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Empleado.mdf;Integrated Security=True;Connect Timeout=30");
             conexion.Open();
             string cod = textBox1.Text;
-            string cadena = "select nombre,dui from Empleado where Id=" + cod;
+            string cadena = "select nombre,dui from Empleados where Id=" + cod;
             SqlCommand comando = new SqlCommand(cadena, conexion);
             SqlDataReader registro = comando.ExecuteReader();
             if (registro.Read())
